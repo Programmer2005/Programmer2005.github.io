@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    padding: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+ul.option{
+    list-style-type: none;
+    display: flex;
+    align-items: baseline;
+}
+ul.option li,button.language{
+    
+    color: white;
+    font-weight: bold;
+    font-size: small;
+}
+
+ul.option li{
+    margin-right: 4rem;
+}
+button.language{
+    background: transparent;
+    border: 3px solid #000;
+    outline-color: white;
+    border: none;
+    padding:1em 2em;
+}
+div.icon{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: x-large;
+    color:white;
+}
+
+header.nav-bar{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-around;
+    align-items:center;
+    background: #1ebea5;
+    padding: 15px;
+}
+
+div.mediums{
+    list-style-type: none;
+}
+
+div.mediums li svg{
+    height: 20px;
+    width: 20px;
+}
+div.mediums li label a{
+    text-decoration: none;
+    color: #1baea5;
+}
+div.information{
+    margin-top: 250px;
+}
+
+div.image img{
+    height: 600px;
+    width: 320px;
+    margin-top: -80px;
+}
+
+div.information{
+    display: grid;
+    grid-template-columns: minmax(100px,300px) 400px 100px 300px minmax(100px,400px);
+    /* grid-template-rows: auto; */
+    grid-auto-rows: 150px;
+}
+
+div.text,div.info,div.mediums{
+    grid-column: 2;
+    grid-row: 1;
+}
+div.text{
+    align-self: start;
+}
+div.mediums{
+    margin-top: 220px;
+}
+
+div.info p.info-text{
+    font-size: small;
+    color: gray;
+}
+div.image{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+div.image img{
+    margin-bottom: auto;
+}
+
+div.info{
+    grid-row: 2;
+}
+
+
+div.features{
+    display: grid;
+    margin-top: 300px;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem
+}
+div.business,div.encryption{
+    width: 100%;
+    text-align: center;
+    height: 600px;
+    overflow: hidden;
+    padding: 30px 10%;
+
+}
+img.image1{
+    width: 300px;
+    justify-self: center;
+    margin-top: 70px;
+}
+
+div.business{
+    background: #d0e9ea;
+}
+
+div.encryption{
+    background: #edf8f5;
+}
+
+div.features a{
+    text-decoration: none;
+    color: #39b3ed;
+}
+
+div.explore{
+    display: flex;
+    justify-content: center;
+    padding: 75px 0;
+}
+
+button.exploreFeatures{
+    background: transparent;
+    border:2px solid #1ebea5;
+    color: #1ebea5;
+    padding: 1em 2em;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+footer.links{
+    display: grid;
+    grid-template-columns: repeat(4,max-content);
+    grid-template-rows: auto;
+    background: #273443;
+    grid-gap: 20%; 
+    padding: 40px 10%;  
+    /* grid-auto-rows: 0; */
+}
+
+footer.links p{
+    color: white;
+    font-size: smaller;
+}
+
+footer.links label{
+    color: gray;
+    font-weight: bold;
+    font-size: smaller;
+    margin-bottom: 30px;
+}
+
+div.Realicon{
+    display: none;
+}
+
+div.Realinfo{
+    display: none;
+}
+@media screen and (max-width:957px){
+    header.nav-bar{
+        display: none;
+    }
+    div.information,div.features{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    div.icon label{
+        display: none;
+    }
+    
+    div.info{
+        display: none;
+    }
+    div.information{
+        margin: 0;
+        background-color:#1ebea5 ;
+    }
+
+    div.image{
+        margin-top: 100px;
+    }
+
+    div.text{
+        margin: 0 auto;
+    }
+
+    div.mediums{
+        display: none;
+    }
+
+    div.features{
+        margin-top: 0px;
+    }
+    footer.links{
+        display: grid;
+        grid-template-columns: repeat(2,max-content);
+        grid-template-rows: repeat(2,auto);
+        column-gap: 50%;
+        padding-bottom: 80px;
+    }
+    div.Realicon{
+        display: block;
+    }
+    div.Realicon img#Realimage{
+        height: 80px;
+        width: 80px;
+    }
+    div.Realinfo{
+        display:block;
+        font-size: small;
+        color: gray;
+    }
+    div.information{
+        padding: 5% 5% 0 5%;
+        overflow: hidden;
+        height: 640px;
+    }
+}
